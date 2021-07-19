@@ -2,7 +2,7 @@ import { Component, OnInit, ViewChild } from '@angular/core';
 import {HttpRestServiceService} from '../http-rest-service.service';
 import { NgxSpinnerService } from "ngx-spinner";
 import { DataSource } from '@angular/cdk/collections';
-
+import {ToastrService} from 'ngx-toastr';
 import { MatTable } from '@angular/material/table';
 import { MatDialog } from '@angular/material/dialog';
 import {DialogBoxComponent, employee} from '../dialog-box/dialog-box.component';
@@ -19,7 +19,7 @@ export class EmployeesComponent implements OnInit {
   empNewRec:employee | undefined;
 
   constructor(public HttpRestService: HttpRestServiceService,
-    private SpinnerService: NgxSpinnerService, public dialog: MatDialog) { }
+    private SpinnerService: NgxSpinnerService, public dialog: MatDialog, private toastr:ToastrService) { }
 
     @ViewChild(MatTable,{static:true}) table: MatTable<any> | undefined;
 
@@ -52,21 +52,30 @@ export class EmployeesComponent implements OnInit {
     return this.HttpRestService.getemployees().subscribe((data: {}) => {
       this.dataSource=data;
       this.SpinnerService.hide();
+
     })
   }
   deleteemployee(result: any){
+    this.SpinnerService.show();
     return this.HttpRestService.deleteemployee(result).subscribe((res)=>{
+      this.SpinnerService.hide();
+      this.toastr.success("Delete Successful");
       this.fetchEmployees();
     })
   }
   updateemployee(result: any){
+    this.SpinnerService.show();
     return this.HttpRestService.updateemployee(result).subscribe((res)=>{
+      this.SpinnerService.hide();
+      this.toastr.success("Update Successful");
       this.fetchEmployees();
     })
   }
   createemployee(result: any){
-
+    this.SpinnerService.show();
     return this.HttpRestService.createemployee(result).subscribe((res)=>{
+      this.SpinnerService.hide();
+      this.toastr.success("Create Successful");
       this.fetchEmployees();
     })
   }
