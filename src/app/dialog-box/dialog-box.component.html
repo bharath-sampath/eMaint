@@ -1,28 +1,30 @@
-<h1 mat-dialog-title>Row Action :: <strong>{{action}}</strong></h1>
+<h1 mat-dialog-title><strong>{{action}} an Employee</strong></h1>
 <div mat-dialog-content>
+  <form [formGroup]="dialogForm" (ngSubmit) = doAction()>
   <mat-form-field *ngIf="action != 'Delete'; else elseTemplate">
-    <input placeholder="{{action}} Employee #" matInput [(ngModel)]="local_data.ecode" required>
+    <input placeholder="{{action}} Employee #" matInput [(ngModel)]="local_data.ecode" formControlName= "ecode">
   </mat-form-field>
   <mat-form-field *ngIf="action != 'Delete'">
-    <input placeholder="{{action}} First Name" matInput [(ngModel)]="local_data.fname" required>
+    <input placeholder="{{action}} First Name" matInput [(ngModel)]="local_data.fname" formControlName= "fname">
   </mat-form-field>
   <mat-form-field *ngIf="action != 'Delete'">
-    <input placeholder="{{action}} Last Name" matInput [(ngModel)]="local_data.lname"required>
+    <input placeholder="{{action}} Last Name" matInput [(ngModel)]="local_data.lname" formControlName= "lname">
   </mat-form-field>
   <mat-form-field *ngIf="action != 'Delete'">
-    <input placeholder="{{action}} Email" matInput [(ngModel)]="local_data.email" type="email" required>
+    <input placeholder="{{action}} Email" matInput [(ngModel)]="local_data.email" type="email" formControlName= "email">
   </mat-form-field>
   <mat-form-field *ngIf="action != 'Delete'">
-    <input placeholder="{{action}} Address" matInput [(ngModel)]="local_data.address" required>
+    <input placeholder="{{action}} Address" matInput [(ngModel)]="local_data.address" formControlName= "address">
   </mat-form-field>
   <mat-form-field *ngIf="action != 'Delete'">
-    <input placeholder="{{action}} Active" matInput [(ngModel)]="local_data.active" required>
+    <input placeholder="{{action}} Active" matInput [(ngModel)]="local_data.active" formControlName= "active">
   </mat-form-field>
   <ng-template #elseTemplate>
-    Sure to delete <b>{{local_data.name}}</b>?
+    Sure to delete the employee record - {{local_data.ecode}} ?
   </ng-template>
+</form>
 </div>
 <div mat-dialog-actions>
-  <button mat-button (click)="doAction()" mat-flat-button color="primary" >{{action}} </button>
+  <button mat-button (click)="doAction()" mat-flat-button color="primary" [disabled]="!dialogForm.valid&&action!='Delete'">{{action}} </button>
   <button mat-button (click)="closeDialog()" mat-flat-button color="warn">Cancel</button>
 </div>

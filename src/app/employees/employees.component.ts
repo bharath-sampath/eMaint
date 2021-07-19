@@ -29,7 +29,7 @@ export class EmployeesComponent implements OnInit {
       }
       this.empNewRec=obj;
       const dialogRef = this.dialog.open(DialogBoxComponent, {
-        width: '300px',
+        width: '225px',
         data: this.empNewRec
       });
       dialogRef.afterClosed().subscribe(result => {

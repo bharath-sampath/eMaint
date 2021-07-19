@@ -33,7 +33,7 @@ html,body{
   flex-wrap: nowrap;
   background-color: lightskyblue;
   box-shadow: 5px 5px 5px #888888;
-  border-radius: 4px;
+  border-radius: 2px;
   justify-content: flex-start;
   /* align-items: center; */
 }
