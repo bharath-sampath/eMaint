@@ -1,0 +1,15 @@
+<div class="_login_container">
+  <div class=_login_card>
+    <div class="_login_content">
+      <h1>Log in to e-Mainter</h1>
+      <form [formGroup]="loginForm" (ngSubmit) = onSubmit()>
+      <label for="name">Username</label>
+      <input class=_input_box type="text" id="name" formControlName="userName">
+      <label for="pass">Password</label>
+      <input class="_password _input_box" type="password" id="pass" formControlName="passWord">
+      <button class=_primary_btn type="submit" [disabled]="!loginForm.valid">Login</button>
+      </form>
+    </div>
+  </div>
+</div>
+<ngx-spinner></ngx-spinner>

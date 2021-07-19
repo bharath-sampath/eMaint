@@ -1,0 +1,46 @@
+nav {
+  display: flex;
+  position:sticky;
+  flex-direction: row;
+  justify-content:space-between;
+  background-color:navy;
+  align-items: center;
+  width: 100%;
+  top: 0;
+  z-index: 1;
+}
+
+ul{
+  display:flex;
+  justify-items: center;
+  /* justify-content: space-around; */
+  align-self: flex-end;
+}
+
+li{
+  display: block;
+  text-decoration-style: none;
+  margin-right:15px;
+  font-size: large;
+  align-items: center;
+
+}
+
+a{
+  text-decoration: none;
+  color: aliceblue;
+}
+
+li:hover,li:focus{
+  font-size: larger;
+  cursor:pointer;
+  font-weight: 1000;
+}
+img{
+  align-self:center;
+  display: inline-block;
+  height: 30px;
+  width: 30px;
+  justify-content: center;
+  margin-left: 15px;
+}

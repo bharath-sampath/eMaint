@@ -1,1 +1,91 @@
 /* You can add global styles to this file, and also import other style files */
+@import '~ngx-toastr/toastr';
+
+html{
+  background-color: lightcyan;
+}
+html,body{
+  width:100%;
+  height:95%;
+  margin: 0;
+  padding: 0;
+}
+*,html {
+  font-family: 'Lato', sans-serif;
+  box-sizing: border-box;
+}
+._input_box{
+  margin:2px;
+  width: 90%;
+  border: 0;
+  outline: 0;
+  padding: 0.5rem;
+  border-bottom: 2px solid #d3d3d3;
+  box-shadow: none;
+  color: #111;
+  background-color:lightskyblue;
+}
+._primary_btn{
+  margin-top: 0.5rem;
+  width:30%;
+  height: 25%;
+  align-self: center;
+  border-radius: 5px;
+  font-size:14px;
+  background-color: blue;
+  color:white;
+  cursor: pointer;
+}
+._input_box:focus,
+._input_box:valid {
+  border-color:blue;
+}
+._input_box:invalid {
+  outline: 0;
+}
+._panel_container{
+  display:flex;
+  height:100%;
+  width:100%;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+
+._full_panel{
+  display: flex;
+  flex:.75;
+  height:90%;
+  /* border: solid 2px blue; */
+  flex-direction: column;
+  flex-wrap: nowrap;
+  background-color: lightskyblue;
+  box-shadow: 5px 5px 5px #888888;
+  border-radius: 4px;
+  justify-content: center;
+  align-items: center;
+}
+table {
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+  background-color:whitesmoke;
+ /* border: solid 2px gray; */
+ border-radius: 4px;
+ box-shadow: 5px 5px 5px #888888;
+ /* justify-content: center; */
+}
+
+tr{
+  display: flex;
+  flex-direction: row;
+  flex: 0.1 0.1 0.3 0.1 0.1 0.3;
+  justify-content: space-between;
+  background-color: #ffffff;
+  margin: 5px;
+  box-shadow: 0px 0px 9px 0px rgba(0,0,0,0.1);
+  height: 30px;
+  align-items: center;
+}
+
+
