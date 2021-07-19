@@ -4,6 +4,17 @@ This project was generated with [Angular CLI](https://github.com/angular/angular
 
 Working username and password - bsampath/topgun84 (Has all access)
 
+Tried following features- 
+1. Routing
+2. Route Guard
+3. Reactive Forms
+4. http request handling (Restdb.io for backend)
+5. Angular Material
+6. Dependency Injection (Services)
+7. Component communication (NgModal, Data service)
+8. ngx-toastr for Messages
+9. ngx-spinner for loading animation
+
 ## Development server
 
 Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
