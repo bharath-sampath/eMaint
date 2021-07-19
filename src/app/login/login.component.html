@@ -5,13 +5,14 @@
       <form [formGroup]="loginForm" (ngSubmit) = onSubmit()>
       <!-- <label for="name">Username</label> -->
       <mat-form-field>
-        <input placeholder = "Username" type="text" id="name" matInput formControlName="userName">
+        <input class = "uname" placeholder = "Username" type="text" id="name" matInput formControlName="userName">
       </mat-form-field>
+      <br>
       <mat-form-field>
-        <input placeholder = "Password" type="password" id="pass" matInput formControlName="passWord">
+        <input class= "pwd" placeholder = "Password" type="password" id="pass" matInput formControlName="passWord">
       </mat-form-field>
-      <div mat-dialog-actions>
-      <button mat-button type="submit" [disabled]="!loginForm.valid">Login</button>
+      <div mat-dialog-actions class="mat-dialog-actions">
+      <button mat-button type="submit" [disabled]="!loginForm.valid" mat-flat-button color="primary">Login</button>
     </div>
       </form>
     </div>

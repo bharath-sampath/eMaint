@@ -28,6 +28,7 @@ h1{
   align-content: center;
   flex-direction: column;
   align-self: center;
+  align-items: center;
   padding:15px 15px;
 }
 
@@ -38,6 +39,16 @@ h1{
   align-items: center;
   flex-direction: row;
   align-content: space-between;
+}
+
+.uname,.pwd {
+  align-self: center;
+}
+
+.mat-dialog-actions {
+  display:flex;
+  flex-direction: column;
+
 }
 
 

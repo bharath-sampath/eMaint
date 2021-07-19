@@ -5,3 +5,8 @@
   width: 100%;
   justify-content: center;
 }
+.action-link{
+  cursor:pointer;
+  color: blue;
+  font-weight: 250;
+}
