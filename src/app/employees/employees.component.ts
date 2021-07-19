@@ -23,8 +23,10 @@ export class EmployeesComponent implements OnInit {
 
     @ViewChild(MatTable,{static:true}) table: MatTable<any> | undefined;
 
-    openDialog(action,obj) {
-      obj.action = action;
+    openDialog(action: any,obj: any) {
+      if (obj !== undefined) {
+        obj.action = action;
+      }
       this.empNewRec=obj;
       const dialogRef = this.dialog.open(DialogBoxComponent, {
         width: '300px',
