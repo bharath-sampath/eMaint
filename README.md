@@ -10,10 +10,11 @@ Tried following features-
 3. Reactive Forms
 4. http request handling (Restdb.io for backend)
 5. Angular Material
-6. Dependency Injection (Services)
-7. Component communication (NgModal, Data service)
-8. ngx-toastr for Messages
-9. ngx-spinner for loading animation
+6. Responsive (Flexbox)
+7. Dependency Injection (Services)
+8. Component communication (NgModal, Data service)
+9. ngx-toastr for Messages
+10. ngx-spinner for loading animation
 
 ## Development server
 
