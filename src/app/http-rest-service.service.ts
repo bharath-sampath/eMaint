@@ -2,6 +2,7 @@ import { Injectable } from '@angular/core';
 import { HttpClient, HttpHeaders,HttpErrorResponse, HttpParams } from '@angular/common/http';
 import { Observable, throwError } from 'rxjs';
 import { retry, catchError } from 'rxjs/operators';
+import {ToastrService} from 'ngx-toastr'
 
 export class employee {
   _id:string ="";
@@ -30,7 +31,7 @@ export class HttpRestServiceService {
 
   endPoint = 'https://employeemainterdb01-edf3.restdb.io/rest';
 
-  constructor(private httpClient: HttpClient) {
+  constructor(private httpClient: HttpClient, private toastr:ToastrService) {
 
    }
 
@@ -68,8 +69,7 @@ updateemployee(result:employee) {
 }
 
 createemployee(result:employee){
-  console.log(JSON.stringify(result));
-  return this.httpClient.post<employee>(this.endPoint+'/employees',result,{headers:this.headers})
+   return this.httpClient.post<employee>(this.endPoint+'/employees',result,{headers:this.headers})
   .pipe(retry(1),catchError(this.httpError)
   )
 }
@@ -83,7 +83,8 @@ httpError(error:any) {
     // server side error
     msg = `Error Code: ${error.status}\nMessage: ${error.message}`;
   }
-  console.log(msg);
+
+
   return throwError(msg);
 }
 

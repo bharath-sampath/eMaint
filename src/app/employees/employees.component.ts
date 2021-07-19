@@ -54,6 +54,10 @@ export class EmployeesComponent implements OnInit {
     return this.HttpRestService.getemployees().subscribe((data: {}) => {
       this.dataSource=data;
       this.SpinnerService.hide();
+    },(error)=>{
+      this.SpinnerService.hide();
+      console.log(error);
+      this.toastr.error(error);
 
     })
   }
@@ -63,6 +67,11 @@ export class EmployeesComponent implements OnInit {
       this.SpinnerService.hide();
       this.toastr.success("Delete Successful");
       this.fetchEmployees();
+    },(error)=>{
+      this.SpinnerService.hide();
+      console.log(error);
+      this.toastr.error(error);
+
     })
   }
   updateemployee(result: any){
@@ -71,14 +80,25 @@ export class EmployeesComponent implements OnInit {
       this.SpinnerService.hide();
       this.toastr.success("Update Successful");
       this.fetchEmployees();
+    },(error)=>{
+      this.SpinnerService.hide();
+      console.log(error);
+      this.toastr.error(error);
+
     })
   }
   createemployee(result: any){
     this.SpinnerService.show();
     return this.HttpRestService.createemployee(result).subscribe((res)=>{
+
       this.SpinnerService.hide();
       this.toastr.success("Create Successful");
       this.fetchEmployees();
+    },(error)=>{
+      this.SpinnerService.hide();
+      console.log(error);
+      this.toastr.error(error);
+
     })
   }
 
