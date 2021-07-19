@@ -4,13 +4,14 @@ import { Observable, throwError } from 'rxjs';
 import { retry, catchError } from 'rxjs/operators';
 
 export class employee {
+  _id:string ="";
   ecode:string="";
   fname:string="";
   lname:string="";
-  photo:string="";
   active:boolean=true;
   email:string="";
   address:string="";
+  action:string="";
 }
 
 export class user {
@@ -54,21 +55,21 @@ getemployees() : Observable<employee>{
     )
 }
 
-deleteemployee(id:string){
-  return this.httpClient.delete<employee>(this.endPoint+'/employees'+'/'+id,{headers:this.headers})
+deleteemployee(result:employee){
+  return this.httpClient.delete<employee>(this.endPoint+'/employees'+'/'+result._id,{headers:this.headers})
   .pipe(retry(1),catchError(this.httpError)
   )
 }
 
-updateemployee(id:string,employee:string) {
-  return this.httpClient.put<employee>(this.endPoint+'/employees'+'/'+id,JSON.stringify(employee),{headers:this.headers})
+updateemployee(result:employee) {
+  return this.httpClient.put<employee>(this.endPoint+'/employees'+'/'+result._id,result,{headers:this.headers})
   .pipe(retry(1),catchError(this.httpError)
   )
 }
 
-createemployee(employee:string){
-  console.log(JSON.stringify(employee));
-  return this.httpClient.post<employee>(this.endPoint+'/employees',JSON.stringify(employee),{headers:this.headers})
+createemployee(result:employee){
+  console.log(JSON.stringify(result));
+  return this.httpClient.post<employee>(this.endPoint+'/employees',result,{headers:this.headers})
   .pipe(retry(1),catchError(this.httpError)
   )
 }

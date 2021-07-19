@@ -3,11 +3,16 @@
     <div class="_login_content">
       <h1>Log in to e-Mainter</h1>
       <form [formGroup]="loginForm" (ngSubmit) = onSubmit()>
-      <label for="name">Username</label>
-      <input class=_input_box type="text" id="name" formControlName="userName">
-      <label for="pass">Password</label>
-      <input class="_password _input_box" type="password" id="pass" formControlName="passWord">
-      <button class=_primary_btn type="submit" [disabled]="!loginForm.valid">Login</button>
+      <!-- <label for="name">Username</label> -->
+      <mat-form-field>
+        <input placeholder = "Username" type="text" id="name" matInput formControlName="userName">
+      </mat-form-field>
+      <mat-form-field>
+        <input placeholder = "Password" type="password" id="pass" matInput formControlName="passWord">
+      </mat-form-field>
+      <div mat-dialog-actions>
+      <button mat-button type="submit" [disabled]="!loginForm.valid">Login</button>
+    </div>
       </form>
     </div>
   </div>

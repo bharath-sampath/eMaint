@@ -1,0 +1,7 @@
+._addrow{
+  display: flex;
+  flex-direction: column;
+  height:35%;
+  width: 100%;
+  justify-content: center;
+}
