@@ -1,22 +1,22 @@
 <h1 mat-dialog-title>Row Action :: <strong>{{action}}</strong></h1>
 <div mat-dialog-content>
   <mat-form-field *ngIf="action != 'Delete'; else elseTemplate">
-    <input placeholder="{{action}} Employee #" matInput [(ngModel)]="local_data.ecode">
+    <input placeholder="{{action}} Employee #" matInput [(ngModel)]="local_data.ecode" required>
   </mat-form-field>
   <mat-form-field *ngIf="action != 'Delete'">
-    <input placeholder="{{action}} First Name" matInput [(ngModel)]="local_data.fname">
+    <input placeholder="{{action}} First Name" matInput [(ngModel)]="local_data.fname" required>
   </mat-form-field>
   <mat-form-field *ngIf="action != 'Delete'">
-    <input placeholder="{{action}} Last Name" matInput [(ngModel)]="local_data.lname">
+    <input placeholder="{{action}} Last Name" matInput [(ngModel)]="local_data.lname"required>
   </mat-form-field>
   <mat-form-field *ngIf="action != 'Delete'">
-    <input placeholder="{{action}} Email" matInput [(ngModel)]="local_data.email" type="email">
+    <input placeholder="{{action}} Email" matInput [(ngModel)]="local_data.email" type="email" required>
   </mat-form-field>
   <mat-form-field *ngIf="action != 'Delete'">
-    <input placeholder="{{action}} Address" matInput [(ngModel)]="local_data.address">
+    <input placeholder="{{action}} Address" matInput [(ngModel)]="local_data.address" required>
   </mat-form-field>
   <mat-form-field *ngIf="action != 'Delete'">
-    <input placeholder="{{action}} Active" matInput [(ngModel)]="local_data.active">
+    <input placeholder="{{action}} Active" matInput [(ngModel)]="local_data.active" required>
   </mat-form-field>
   <ng-template #elseTemplate>
     Sure to delete <b>{{local_data.name}}</b>?
