@@ -14,35 +14,7 @@ html,body{
   font-family: 'Lato', sans-serif;
   box-sizing: border-box;
 }
-._input_box{
-  margin:2px;
-  width: 90%;
-  border: 0;
-  outline: 0;
-  padding: 0.5rem;
-  border-bottom: 2px solid #d3d3d3;
-  box-shadow: none;
-  color: #111;
-  background-color:lightskyblue;
-}
-._primary_btn{
-  margin-top: 0.5rem;
-  width:30%;
-  height: 25%;
-  align-self: center;
-  border-radius: 5px;
-  font-size:14px;
-  background-color: blue;
-  color:white;
-  cursor: pointer;
-}
-._input_box:focus,
-._input_box:valid {
-  border-color:blue;
-}
-._input_box:invalid {
-  outline: 0;
-}
+
 ._panel_container{
   display:flex;
   height:100%;
@@ -62,6 +34,6 @@ html,body{
   background-color: lightskyblue;
   box-shadow: 5px 5px 5px #888888;
   border-radius: 4px;
-  justify-content: center;
+  justify-content: flex-start;
   /* align-items: center; */
 }

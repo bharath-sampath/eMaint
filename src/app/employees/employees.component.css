@@ -1,9 +1,8 @@
 ._addrow{
   display: flex;
-  flex-direction: column;
-  height:35%;
+  height:10%;
   width: 100%;
-  justify-content: center;
+  justify-content: flex-end;
 }
 .action-link{
   cursor:pointer;

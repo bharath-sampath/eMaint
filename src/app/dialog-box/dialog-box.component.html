@@ -10,7 +10,7 @@
     <input placeholder="{{action}} Last Name" matInput [(ngModel)]="local_data.lname">
   </mat-form-field>
   <mat-form-field *ngIf="action != 'Delete'">
-    <input placeholder="{{action}} Email" matInput [(ngModel)]="local_data.email">
+    <input placeholder="{{action}} Email" matInput [(ngModel)]="local_data.email" type="email">
   </mat-form-field>
   <mat-form-field *ngIf="action != 'Delete'">
     <input placeholder="{{action}} Address" matInput [(ngModel)]="local_data.address">
@@ -23,6 +23,6 @@
   </ng-template>
 </div>
 <div mat-dialog-actions>
-  <button mat-button (click)="doAction()">{{action}}</button>
+  <button mat-button (click)="doAction()" mat-flat-button color="primary" >{{action}} </button>
   <button mat-button (click)="closeDialog()" mat-flat-button color="warn">Cancel</button>
 </div>

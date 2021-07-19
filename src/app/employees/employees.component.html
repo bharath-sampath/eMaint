@@ -1,7 +1,7 @@
 <div class="_panel_container">
   <div class=_full_panel>
     <div class='_addrow'>
-    <button class='_primary_btn' (click)="openDialog('Add',{})">Add Row</button>
+    <button mat-button color='primary' mat-flat-button (click)="openDialog('Add',{})">Add</button>
   </div>
   <table mat-table [dataSource]="dataSource" #mytable class="my-table mat-elevation-z8">
     <ng-container matColumnDef="Employee #">
