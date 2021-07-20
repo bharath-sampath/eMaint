@@ -1,11 +1,11 @@
-<div class="_login_container">
-  <div class=_login_card>
+<div class="_login_container " >
+  <div class="_login_card" [ngClass]="{'_shake' : ErrFlg$ | async }">
     <div class="_login_content">
       <h1>Log in to e-Mainter</h1>
       <form [formGroup]="loginForm" (ngSubmit) = onSubmit()>
       <!-- <label for="name">Username</label> -->
       <mat-form-field>
-        <input class = "uname" placeholder = "Username" type="text" id="name" matInput formControlName="userName">
+        <input class = "uname" placeholder = "Username" type="text" id="name" matInput formControlName="userName" ngModel appAutofocus>
       </mat-form-field>
       <br>
       <mat-form-field>

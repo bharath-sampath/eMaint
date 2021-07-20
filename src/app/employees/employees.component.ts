@@ -6,11 +6,13 @@ import {ToastrService} from 'ngx-toastr';
 import { MatTable } from '@angular/material/table';
 import { MatDialog } from '@angular/material/dialog';
 import {DialogBoxComponent, employee} from '../dialog-box/dialog-box.component';
+import { rowsAnimation } from '../animations/template.animations';
 
 @Component({
   selector: 'app-employees',
   templateUrl: './employees.component.html',
-  styleUrls: ['./employees.component.css']
+  styleUrls: ['./employees.component.css'],
+  animations: [rowsAnimation]
 })
 
 export class EmployeesComponent implements OnInit {

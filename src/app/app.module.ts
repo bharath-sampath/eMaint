@@ -20,6 +20,7 @@ import { MatFormFieldModule } from '@angular/material/form-field';
 import { MatInputModule } from '@angular/material/input';
 import { MatButtonModule } from '@angular/material/button';
 import { DialogBoxComponent } from './dialog-box/dialog-box.component';
+import { AutofocusDirective } from './autofocus.directive';
 
 @NgModule({
   declarations: [
@@ -27,7 +28,8 @@ import { DialogBoxComponent } from './dialog-box/dialog-box.component';
     LoginComponent,
     EmployeesComponent,
     HomeComponent,
-    DialogBoxComponent
+    DialogBoxComponent,
+    AutofocusDirective
   ],
   imports: [
     BrowserModule,
