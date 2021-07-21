@@ -46,7 +46,7 @@ h1{
 
 }
 ._shake {
-  animation: shake 0.4s cubic-bezier(.36,.07,.19,.97) both;
+  animation: shake .4s cubic-bezier(.36,.07,.19,.97) both;
   transform: translate3d(0, 0, 0);
   backface-visibility: hidden;
   perspective: 1000px;
@@ -54,19 +54,19 @@ h1{
 
 @keyframes shake {
   8%, 41% {
-    transform: translate3d(-10px, 0, 0);
+    transform: translate3d(-20px, 0, 0);
   }
 
   25%, 58% {
-    transform: translate3d(10px, 0, 0);
+    transform: translate3d(20px, 0, 0);
   }
 
   75% {
-    transform: translate3d(-5px, 0, 0);
+    transform: translate3d(-10px, 0, 0);
   }
 
   92% {
-    transform: translate3d(5px, 0, 0);
+    transform: translate3d(10px, 0, 0);
   }
 
   0%, 100% {
