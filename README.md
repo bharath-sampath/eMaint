@@ -10,7 +10,7 @@ Tried following features-
 3. Reactive Forms
 4. http request handling (Restdb.io for backend)
 5. Angular Material
-6. Responsive (Flexbox)
+6. Flexbox
 7. Dependency Injection (Services)
 8. Component communication (NgModal, Data service)
 9. ngx-toastr for Messages
